@@ -1,9 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 html {
   font-size: 16px;
+  color: white;
+  font-family: "Koulen";
 }
 
 body {
@@ -11,22 +10,90 @@ body {
 }
 /* ====== Header ======*/
 header {
-  width: 100vw;
-  border: red solid;
-  background: transparent;
+  position: absolute;
+  width: 100%;
+  background: #0002;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 0px;
 }
+
+li {
+  list-style: none;
+}
+ul {
+  margin: 1rem;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  display: inline-block;
+  animation: appear 1s;
+  transition: 0.2s;
+}
+header a:hover {
+  text-shadow: 0 0 20px red;
+}
+/* animation */
+@keyframes appear {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* Logo */
 header img {
-  width: 320px;
-  height: 104px;
+  width: 30rem;
+  height: 10rem;
+  object-fit: cover;
+  animation: appear 1s;
 }
+
 /* Titre Section */
-section {
-  width: 100vw;
-  height: 100vh;
+#bloghero {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, black, #0000);
+  overflow: hidden;
 }
-section img {
-  object-fit: fill;
+#bloghero h1 {
+  font-size: 10rem;
+  color: black;
+}
+#bloghero img {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  top: 0;
+}
+
+#maincontent {
+  height: 100vw;
+  background: #000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  #bloghero {
+    height: fit-content;
+  }
 }
