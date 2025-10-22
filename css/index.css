@@ -18,3 +18,148 @@
     height: 100vh;
     color: white;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+html {
+  font-size: 16px;
+  color: white;
+  font-family: "Koulen";
+}
+
+body {
+  background: #000;
+}
+/* ================================== */
+/* ====== Header ======*/
+li {
+  list-style: none;
+}
+ul {
+  margin: 1rem;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header {
+  position: absolute;
+  width: 100%;
+  background: #0002;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  display: inline-block;
+  animation: appear 1s;
+  transition: 0.2s;
+}
+header a:hover {
+  text-shadow: 0 0 20px red;
+}
+/* animation */
+@keyframes appear {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* Logo */
+header img {
+  width: 30rem;
+  height: 10rem;
+  object-fit: cover;
+  animation: appear 1s;
+}
+#menu {
+  display: none;
+}
+/* ================================== */
+/* Mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  header {
+    background: #000;
+  }
+  header ul {
+    display: none;
+  }
+  #menu {
+    width: 10%;
+    height: 10%;
+    display: block;
+    object-fit: cover;
+    transition: 0.2s;
+    z-index: 2;
+  }
+  #dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: #000;
+    animation: drop 0.5s ease-in-out;
+  }
+  header a {
+    animation: none;
+  }
+
+  /* dropdown animation */
+  @keyframes drop {
+    from {
+      transform: translateY(-200px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+}
+/* ================================== */
+/* ================================== */
+/* Titre Section */
+#bloghero {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, black, #0000);
+  overflow: hidden;
+}
+#bloghero h1 {
+  font-size: 10rem;
+  color: black;
+}
+#bloghero img {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  top: 0;
+}
+
+#maincontent {
+  height: 100vw;
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  #bloghero {
+    height: fit-content;
+  }
+}
+>>>>>>> e1ec816cf6b511281c40164626ac5521eb82cb54
