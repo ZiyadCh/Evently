@@ -65,8 +65,8 @@ header img {
   display: none;
 }
 /* ================================== */
-/* Mobile */
-@media (max-width: 768px) {
+/* Mobile &  tablet */
+@media (max-width: 1280px) {
   html {
     font-size: 8px;
   }
