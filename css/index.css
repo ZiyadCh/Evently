@@ -20,6 +20,9 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+* {
+  margin: 0;
+}
 html {
   font-size: 16px;
   color: white;
@@ -35,7 +38,7 @@ li {
   list-style: none;
 }
 ul {
-  margin: 1rem;
+  margin: 0rem;
   width: 50%;
   display: flex;
   justify-content: space-around;
@@ -89,6 +92,7 @@ header img {
     font-size: 8px;
   }
   header {
+    width: 100%;
     background: #000;
   }
   header ul {
@@ -111,6 +115,7 @@ header img {
     top: 0;
     background-color: #000;
     animation: drop 0.5s ease-in-out;
+    border: nonedd;
   }
   header a {
     animation: none;
