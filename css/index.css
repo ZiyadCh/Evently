@@ -148,34 +148,42 @@ header img {
 }
 
 /* HERO SECTION PAGE EDetail */
+.hero{
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, black, #0000);
+  
+}
 
-.hero-image img {
+.hero img {
   width: 100%;
   height: 100%;
 }
-.hero-text h1 {
-  font-size: 1.8em;
-  color: #fff;
-  line-height: 1.4;
-  top: -60px;
-}
+
 .hero-content {
-  top: 40%;
-  left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
   text-align: center;
-  width: 80%;
-}
-.btn {
-  display: inline-block;
-  background-color: #c00;
-  color: #fff;
-  padding: 10px 30px;
-  text-decoration: none;
-  font-size: 2em;
-  border-radius: 5px;
-  transition: 0.3s;
+  color: white;
+  padding: 20px;
 }
 
-.btn:hover {
-  background-color: #ff0000;
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 90px;}
+
+.hero-content .btn {
+  background-color: #F00000;
+  color: white;
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.hero-content .btn:hover {
+  background-color: #ff4141;
 }
