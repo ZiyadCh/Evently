@@ -8,17 +8,22 @@
 </head>
 
 <body>
-  <nav>
-    <div class="logo">
-      <a href="index.html"><img src="../images/logo.png" alt="logo-festava"></a>
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="Event.htm">Events</a>
-      <a href="Blog.html">Blogs</a>
-      <a href="FAQ.html">FAQ</a>
-    </div>
-  </nav>
+    <header>
+      <img src="../images/logo.svg" alt="bg" />
+      <ul id="navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./Event.html">Events</a></li>
+        <li><a href="./Blog.html">Blogs</a></li>
+        <li><a href="./FAQ.html">FAQ</a></li>
+      </ul>
+
+      <img
+        id="menu"
+        src="/images/icons8-menu-50.png"
+        alt="menu"
+        onclick="openMenu()"
+      >
+    </header>
     <section class="hero">
         <div class="hero-image">
     <img src="../images/EV.jpg" alt="Kpop artist">
@@ -28,8 +33,8 @@
         <h1>Venez vivre trois jours de musique live, 
           d'animations et de bonne ambiance en bord de mer,
            avec les plus grands artistes du moment !</h1>
-        <a href="EDetail.html" class="btn">voir plus</a>
       </div>
+      <a href="EDetail.html" class="btn">voir plus</a>
     </div>
   </section>
   <section class="description">
@@ -92,3 +97,5 @@
   </section>
 </body>
 </html>
+
+<script src="../js/header.js"></script>
