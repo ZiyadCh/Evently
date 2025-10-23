@@ -225,18 +225,27 @@ header img {
   background: #000;
   display: flex;
 }
+.content-blog {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
 .maps-place {
   width: 30vw;
   border-left: red solid;
   height: 70vh;
 }
-.gridgrad {
-  background-image: linear-gradient(to top, black, #0000);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  z-index: 2;
+#afficher {
+  font-family: "koulen";
+  border: none;
+  padding: 1em;
+  margin: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  color: white;
+  font-size: 24px;
+  background: red;
 }
 .blog-carte-grid {
   display: grid;
@@ -247,6 +256,15 @@ header img {
   justify-content: center;
   overflow: hidden;
   height: 100vh;
+  position: relative;
+}
+.blog-carte-grid::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to top, black, transparent);
+  width: 100%;
+  height: 20%;
 }
 .carte-blog {
   position: relative;
@@ -381,6 +399,14 @@ footer button {
     transition: all 0.2s ease-in-out;
   }
 
+  .blog-carte-grid {
+    grid-template-columns: repeat(2, 20%);
+    border: teal solid;
+    justify-content: start;
+  }
+  .carte-blog p {
+    font-size: 16px;
+  }
   .maps-place {
     display: none;
   }
