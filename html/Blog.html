@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/header.js" defer></script>
     <title>Evently | Blog</title>
   </head>
   <body>
@@ -24,7 +25,6 @@
         onclick="openMenu()"
       />
     </header>
-
     <!-- hero section -->
     <section id="bloghero">
       <img src="../images/pexels-artempodrez-6270262.jpg" alt="" />
@@ -35,7 +35,66 @@
       <section></section>
       <section></section>
     </div>
+    <!-- Footer -->
+    <footer>
+      <img src="/images/logo.svg" alt="" />
+      <!-- footer details -->
+      <!-- mobile -->
+      <div class="responsive-footer">
+        <details>
+          <summary>Contact</summary>
+          <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+          <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+          <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+        </details>
+        <details>
+          <summary>Liens</summary>
+          <p></p><a href="/index.html">Home</a></p>
+          <p><a href="/index.html">Events</a></p>
+          <p><a href="/index.html">faq</a></p>
+        </details>
+        <details>
+          <summary>Email</summary>
+          <p>Pour plus d'information, contacter sur l'email</p>
+          <div class="btn-mail" style="display: flex">
+            <input type="email" />
+            <button>></button>
+        </details>
+      </div>
+
+      <!-- desktop -->
+      <div class="footer-content">
+        <div class="f-detail">
+          <h2>Contact</h2>
+          <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+          <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+          <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+        </div>
+        <div class="f-detail">
+          <h2>liens</h2>
+          <p><a href="/index.html">Home</a></p>
+          <p><a href="/index.html">Events</a></p>
+          <p><a href="/index.html">faq</a></p>
+        </div>
+        <div class="f-detail">
+          <h2>Email</h2>
+          <p>Pour plus d'information, contacter sur l'email</p>
+          <div class="btn-mail" style="display: flex">
+            <input type="email" />
+            <button>></button>
+          </div>
+        </div>
+      </div>
+      <h3
+        style="
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Copyright2025-Evently
+      </h3>
+    </footer>
   </body>
 </html>
-
-<script src="../js/header.js"></script>
