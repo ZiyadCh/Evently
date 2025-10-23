@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
 * {
   margin: 0;
 }
@@ -10,6 +15,7 @@ html {
 
 body {
   background: #000;
+  overflow-x: hidden;
 }
 /* ================================== */
 /* ====== Header ======*/
@@ -116,24 +122,26 @@ header img {
 /* =========================================== */
 #bloghero {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to top, black, #0000);
+  background-image: linear-gradient(to top, black 20%, #9995);
   overflow: hidden;
 }
 #bloghero h1 {
   font-size: 10rem;
   color: black;
 }
+#bloghero h1:hover {
+  text-shadow: 0 0 10px red;
+}
 #bloghero img {
   position: absolute;
   z-index: -1;
   width: 100vw;
   height: auto;
-  object-fit: cover;
-  display: block;
+  object-fit: contain;
   top: 0;
 }
 
@@ -142,9 +150,92 @@ header img {
   background: #000;
 }
 
-@media (max-width: 768px) {
+/* footer*/
+footer {
+  border-top: solid red;
+  bottom: 0;
+}
+.responsive-footer {
+  display: none;
+}
+footer img {
+  width: 20rem;
+  height: 5rem;
+  object-fit: cover;
+  animation: appear 1s;
+}
+.footer-content {
+  margin: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-content img,
+.responsive-footer img {
+  width: 32px;
+  height: 32px;
+}
+.footer-content p,
+.responsive-footer p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+footer input {
+  border: none;
+  padding: 1rem;
+  background-color: #313131;
+  color: #000;
+}
+footer button {
+  border: none;
+  padding: 1rem;
+  background-color: red;
+}
+
+/*  Blog Mobile */
+@media (max-width: 750px) {
   #bloghero {
-    height: fit-content;
+    height: 70vw;
+    width: 100%;
+  }
+  #bloghero img {
+    height: auto;
+  }
+  #maincontent {
+  }
+}
+@media (max-width: 1280px) {
+  #bloghero {
+    height: 50vw;
+    width: 100%;
+  }
+  .footer-content {
+    display: none;
+  }
+  .responsive-footer {
+    display: block;
+  }
+  summary {
+    font-size: 24px;
+    width: 90%;
+    border-bottom: white solid;
+    margin: 20px;
+    transition: all 0.5s;
+  }
+  summary::marker {
+    color: #000;
+  }
+  details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+    transition: all 0.2s ease-in-out;
   }
 }
 /* =========================================== */
