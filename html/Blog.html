@@ -3,20 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/header.js" defer></script>
     <title>Evently | Blog</title>
   </head>
   <body>
+    <!-- global header -->
     <header>
-      <nav>
-        <img src="../images/logo.svg" alt="" />
-        <ul>
-          <li><a href="../index.html"></a></li>
-          <li><a href="./Event.html">Events</a></li>
-          <li><a href="./Blog.html">Blogs</a></li>
-          <li><a href="./FAQ.html">FAQ</a></li>
-        </ul>
-      </nav>
+      <img src="../images/logo.svg" alt="bg" />
+      <ul id="navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./Event.html">Events</a></li>
+        <li><a href="./Blog.html">Blogs</a></li>
+        <li><a href="./FAQ.html">FAQ</a></li>
+      </ul>
+      <img
+        id="menu"
+        src="/images/icons8-menu-50.png"
+        alt="menu"
+        onclick="openMenu()"
+      />
     </header>
-    <section></section>
+    <!-- hero section -->
+    <section id="bloghero">
+      <img src="../images/pexels-artempodrez-6270262.jpg" alt="" />
+      <h1>Blog</h1>
+    </section>
+    <!-- Content -->
+    <div id="maincontent">
+      <div class="content-blog">
+        <section class="blog-carte-grid">
+        
+          <div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div>
+        <div class="carte-blog">
+            <img  src="/images/pexels-sebastian-ervi-866902-1763075.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div>
+        <div class="carte-blog">
+            <img  src="/images/pexels-conojeghuo-375893.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div>
+          <div class="carte-blog">
+            <img  src="/images/pexels-artempodrez-6270262.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/austin-neill-247047-unsplash.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-levi-damasceno-169031-553586.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-johannes-havn-835931-2417726.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+        </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+        </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+          </div><div class="carte-blog">
+            <img  src="/images/pexels-caricatte-2231754.jpg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti.</p>
+        </section>
+        <button id="afficher">Afficher plus</button>
+      </div>
+
+      <section class="maps-place">
+
+        
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <img src="/images/logo.svg" alt="" />
+      <!-- footer details -->
+      <!-- mobile -->
+      <div class="responsive-footer">
+        <details>
+          <summary>Contact</summary>
+          <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+          <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+          <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+        </details>
+        <details>
+          <summary>Liens</summary>
+          <p></p><a href="/index.html">Home</a></p>
+          <p><a href="/index.html">Events</a></p>
+          <p><a href="/index.html">faq</a></p>
+        </details>
+        <details>
+          <summary>Email</summary>
+          <p>Pour plus d'information, contacter sur l'email</p>
+          <div class="btn-mail" style="display: flex">
+            <input type="email" />
+            <button>></button>
+        </details>
+      </div>
+
+      <!-- desktop -->
+      <div class="footer-content">
+        <div class="f-detail">
+          <h2>Contact</h2>
+          <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+          <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+          <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+        </div>
+        <div class="f-detail">
+          <h2>liens</h2>
+          <p><a href="/index.html">Home</a></p>
+          <p><a href="/index.html">Events</a></p>
+          <p><a href="/index.html">faq</a></p>
+        </div>
+        <div class="f-detail">
+          <h2>Email</h2>
+          <p>Pour plus d'information, contacter sur l'email</p>
+          <div class="btn-mail" style="display: flex">
+            <input type="email" />
+            <button>></button>
+          </div>
+        </div>
+      </div>
+      <h3
+        style="
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Copyright2025-Evently
+      </h3>
+    </footer>
   </body>
 </html>
