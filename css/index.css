@@ -230,11 +230,20 @@ header img {
   border-left: red solid;
   height: 70vh;
 }
+.gridgrad {
+  background-image: linear-gradient(to top, black, #0000);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+}
 .blog-carte-grid {
   display: grid;
   grid-template-columns: repeat(3, 20%);
   width: 100%;
   gap: 160px;
+  row-gap: 24px;
   justify-content: center;
   overflow: hidden;
   height: 100vh;
@@ -247,16 +256,23 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .carte-blog p {
   background-color: #313131;
   width: 100%;
   height: 50%;
+  z-index: 1;
 }
 .carte-blog img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: 0.5s;
+}
+.carte-blog img:hover {
+  scale: 1.3;
+  rotate: 10deg;
 }
 .carte-blog::before {
   content: "11 OCT";
@@ -270,6 +286,7 @@ header img {
   font-size: 2.5rem;
   color: black;
   text-align: center;
+  z-index: 1;
 }
 
 /* ==================== */
@@ -335,6 +352,7 @@ footer button {
 /* MOBILE */
 @media (max-width: 1280px) {
   #bloghero {
+    margin-top: 8vh;
     height: 50vw;
     width: 100%;
   }
@@ -362,9 +380,23 @@ footer button {
     margin-left: 10rem;
     transition: all 0.2s ease-in-out;
   }
+
+  .maps-place {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
   .blog-carte-grid {
     grid-template-columns: 90%;
     gap: 32px;
     height: 90%;
+    overflow: scroll;
+  }
+  .carte-blog {
+    height: 200px;
+    width: 320px;
+  }
+  .carte-blog p {
+    font-size: 1.5rem;
   }
 }
