@@ -13,6 +13,7 @@ html {
   color: white;
   font-family: "Koulen";
 }
+
 .hero {
     background-image: url(../images/heroBackground.jpg);
     background-repeat: no-repeat;
@@ -21,6 +22,7 @@ html {
     width: 100vw;
     height: 100vh;
 }
+
 .hero_contenu {
     display: flex;
     flex-direction : column ;
@@ -236,6 +238,274 @@ header img {
   background: #000;
 }
 
+
+
+
+
+
+
+
+
+
+
+/* Section En-tete (Hero) */
+.En-tete {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.En-tete div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.En-tete img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.En-tete h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 0 0 10px black;
+}
+
+.En-tete p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #fff;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.En-tete button {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #B90000;
+    border: 1px solid black;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.En-tete button:hover {
+    background-color: #ff0000;
+}
+
+.En-tete button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Section Filtrage */
+.Filtrage {
+    padding: 2rem 1rem;
+    background-color: #000;
+}
+
+.Filtrage h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.Filtrage select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.Filtrage select:focus {
+    outline: none;
+    border-color: #B90000;
+}
+
+/* Events Cards Sections */
+.Events-Venir,
+.Events-Passe {
+    padding: 2rem 1rem;
+    background-color: #000;
+}
+
+.Events-Venir h2,
+.Events-Passe h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.events-Avenir {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.event-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.date {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #B90000;
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    border-radius: 3px;
+}
+
+.date strong {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.date span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.event-info {
+    padding: 1rem;
+}
+
+.event-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.event-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Tablet - 768px+ */
+@media (min-width: 768px) {
+    .events-Avenir {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .En-tete h1 {
+        font-size: 3.5rem;
+    }
+
+    .En-tete p {
+        font-size: 1.1rem;
+    }
+
+    .Filtrage {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        align-items: end;
+        padding: 2rem 2rem;
+    }
+
+    .Filtrage h2 {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+    .Filtrage select {
+        margin-bottom: 0;
+    }
+
+    .Events-Venir h2,
+    .Events-Passe h2 {
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+    .Events-Venir,
+    .Events-Passe {
+        padding: 2rem 2rem;
+    }
+}
+
+/* Desktop - 1024px+ */
+@media (min-width: 1024px) {
+    .events-Avenir {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .En-tete {
+        height: 70vh;
+    }
+
+    .En-tete h1 {
+        font-size: 4.5rem;
+    }
+
+    .Filtrage,
+    .Events-Venir,
+    .Events-Passe {
+        padding: 3rem 4rem;
+    }
+
+    .event-card img {
+        height: 250px;
+    }
+}
+
+/* Large Desktop - 1440px+ */
+@media (min-width: 1440px) {
+    .Filtrage,
+    .Events-Venir,
+    .Events-Passe {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+}
 /* footer*/
 footer {
   border-top: solid red;
