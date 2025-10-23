@@ -19,6 +19,7 @@ body {
 }
 
 html {
+
   font-size: 16px;
   color: white;
   font-family: "Koulen";
@@ -100,6 +101,7 @@ html {
     display: grid;
     grid-template-columns : 1fr 1fr;
     margin-top : 10px ;
+    
 
     
 }
@@ -113,19 +115,23 @@ html {
     width: 90%;
     height: 100%;
     border-radius : 15px;
+    
 }
 
 .evenements{
-    width: 70%;
+    width: 80%;
     margin : 0 auto;
     display: grid;
-    grid-template-columns : repeat(auto-fill , minmax(200px , 1fr)) ;
+    /* grid-template-columns : repeat(auto-fill , minmax(200px , 1fr)) ; */
 
 }
 
 .evenements__cotent img {
     width: 100%;
+    height : 100% ;
+
 }
+
 
 .evenements__cotent {
     position: relative;
@@ -143,20 +149,22 @@ html {
 
 
 .partner {
-    width: 70%;
+    width: 80%;
     margin: 10% auto;
 }
 
 .partner h3 {
     justify-self: center;
+    font-size : 20px ;
 }
 
 .partner__images img {
-    width: 80%;
+    width: 100%;
 }
 .partner__images {
     display: grid;
-    grid-template-columns : repeat(auto-fill , minmax(100px , 1fr)) ;
+    grid-template-columns : repeat(auto-fill , minmax(125px , 1fr)) ;
+    gap: 20px;
 }
 
 
@@ -167,6 +175,8 @@ body {
 
 .timer {
     height: 10rem;
+    font-size: 10px;
+    letter-spacing: 2px ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,8 +204,11 @@ body {
 
 
 
-@media (max-width: 768px) {
-   
+@media (min-width: 768px) {
+   .evenements {
+        grid-template-columns : repeat(auto-filL , minmax(250px , 1fr)) ;
+
+    }
 }
 
 @media (min-width: 1024px) {
@@ -207,12 +220,35 @@ body {
 
     .about_everly h3 
     ,.about_everly p  {
-        font-size : 20px ;
+        font-size : 20px;
         width: 70%;  
         align-self: center;
     } 
     .about_everly h3 {
+        font-size : 30px;
         text-align : center ; 
+        letter-spacing: 3px;
+    }
+    .about_everly-img img {
+        width: 70%;
+        height: 100%;
+        border-radius : 35px;
+        justify-self : end;
+        padding : 0 20px 0 0;
+    }
+
+    .evenements {
+        display: grid;
+        grid-template-columns : repeat(3 , minmax(100px , 1fr)) ;
+
+    }
+    .partner__images {
+            grid-template-columns : repeat(6 , minmax(120px , 1fr)) ;
+
+    } 
+    .timer {
+        font-size: 15px;
+        letter-spacing: 3px;
     }
 }
 @media (min-width: 1280px){
