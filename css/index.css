@@ -391,10 +391,32 @@ footer button {
 .desc-container {
   display: flex;
   justify-content: space-between;
-  gap: 0px;
 }
 
-
-
-
-/* HERO SECTION PAGE EDetail */
+.galerie h2{
+    color: #980000;
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-align: center;
+}
+.grid-galerie{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows:300px 300px ;
+  gap: 90px;
+  text-align: center;
+  padding: 70px;
+}
+.carte-ev img{
+  width: 70%;
+  height: 90%;
+  margin-bottom: -10px ;
+}
+.carte-ev p {
+  width: 70%;    
+  margin: 0 auto; 
+  border: 2px solid #980000;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  
+}
