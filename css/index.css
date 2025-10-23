@@ -5,7 +5,7 @@ a {
   font-size: 16px;
 }
 * {
-    margin: 0;
+  margin: 0;
 }
 
 html {
@@ -13,92 +13,91 @@ html {
   color: white;
   font-family: "Koulen";
 }
+
 .hero {
+
     background-image: url(../images/heroBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100vw;
     height: 100vh;
-    
+
+  background-image: url(../images/heroBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+
 }
+
 .hero_contenu {
-    display: flex;
-    flex-direction : column ;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 100vh;
-    color: white;
-    text-shadow: 0 0 10px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100vh;
+  color: white;
+  text-shadow: 0 0 10px black;
 }
-.hero_contenu button{
-    font-size: unset; 
-    max-width: 100px ;
-    padding: 5px 7px ;
-    border-radius: 3px ;
-    border: 1px solid black ;
-    background-color: #B90000;
+.hero_contenu button {
+  font-size: unset;
+  max-width: 100px;
+  padding: 5px 7px;
+  border-radius: 3px;
+  border: 1px solid black;
+  background-color: #b90000;
 }
 
-.about_everly  {
-    position: relative;
-    background-size : cover;
-    background-position : center center ;
-    width:  70% ;
-    height: 50vh;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    margin : 2% auto ;
-    padding : 20px ;
-
+.about_everly {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  width: 70%;
+  height: 50vh;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 2% auto;
+  padding: 20px;
 }
 
 .about_everly:before {
-    content : '' ;
-    position : absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height : 100%  ;
-    background-image : url(../images/alexiz-mora-CGEpY2WaNHI-unsplash.jpg) ;
-    background-size: cover;
-    background-position : center  ;
-    opacity: 0.5;
-    border-radius: 10px;
-    z-index: -1;
-    
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/alexiz-mora-CGEpY2WaNHI-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  border-radius: 10px;
+  z-index: -1;
 }
 
-
 .about_everly:last-child {
-    margin-top: 10%;
+  margin-top: 10%;
 }
 
 .about_everly * {
-    padding: 2px 0;
+  padding: 2px 0;
 }
 .about_everly p {
-    width: 40%;
+  width: 40%;
 }
 
 .about_everly-img {
-    display: flex;
-    
-
-    
+  display: flex;
 }
 
 .about_everly-img img {
-    width: 50%;
-    height: 50%;
-
+  width: 50%;
+  height: 50%;
 }
-
-
-
-
 
 body {
   background: #000;
@@ -203,7 +202,7 @@ header img {
     }
   }
 }
-/* 000000000000000000000000000000000 */
+
 /* =========================================== */
 /* blog*/
 /* =========================================== */
@@ -235,7 +234,360 @@ header img {
 #maincontent {
   height: 100vw;
   background: #000;
+  display: flex;
 }
+.content-blog {
+  display: flex;
+  flex-direction: column;
+
+
+
+
+
+
+
+
+
+
+
+/* Section En-tete (Hero) */
+.En-tete {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.En-tete div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.En-tete img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.En-tete h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 0 0 10px black;
+}
+
+.En-tete p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #fff;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.En-tete button {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #B90000;
+    border: 1px solid black;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.En-tete button:hover {
+    background-color: #ff0000;
+}
+
+.En-tete button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Section Filtrage */
+.Filtrage {
+    padding: 2rem 1rem;
+    background-color: #000;
+}
+
+.Filtrage h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.Filtrage select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.Filtrage select:focus {
+    outline: none;
+    border-color: #B90000;
+}
+
+/* Events Cards Sections */
+.Events-Venir,
+.Events-Passe {
+    padding: 2rem 1rem;
+    background-color: #000;
+}
+
+.Events-Venir h2,
+.Events-Passe h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.events-Avenir {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.event-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.date {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #B90000;
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    border-radius: 3px;
+}
+
+.date strong {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.date span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.event-info {
+    padding: 1rem;
+}
+
+.event-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.event-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Tablet - 768px+ */
+@media (min-width: 768px) {
+    .events-Avenir {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .En-tete h1 {
+        font-size: 3.5rem;
+    }
+
+    .En-tete p {
+        font-size: 1.1rem;
+    }
+
+    .Filtrage {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        align-items: end;
+        padding: 2rem 2rem;
+    }
+
+    .Filtrage h2 {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+    .Filtrage select {
+        margin-bottom: 0;
+    }
+
+    .Events-Venir h2,
+    .Events-Passe h2 {
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+    .Events-Venir,
+    .Events-Passe {
+        padding: 2rem 2rem;
+    }
+}
+
+/* Desktop - 1024px+ */
+@media (min-width: 1024px) {
+    .events-Avenir {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .En-tete {
+        height: 70vh;
+    }
+
+    .En-tete h1 {
+        font-size: 4.5rem;
+    }
+
+    .Filtrage,
+    .Events-Venir,
+    .Events-Passe {
+        padding: 3rem 4rem;
+    }
+
+    .event-card img {
+        height: 250px;
+    }
+}
+
+/* Large Desktop - 1440px+ */
+@media (min-width: 1440px) {
+    .Filtrage,
+    .Events-Venir,
+    .Events-Passe {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+}
+
+  align-items: center;
+}
+.maps-place {
+  width: 30vw;
+  border-left: red solid;
+  height: 70vh;
+}
+#afficher {
+  font-family: "koulen";
+  border: none;
+  padding: 1em;
+  margin: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  color: white;
+  font-size: 24px;
+  background: red;
+}
+.blog-carte-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  width: 100%;
+  gap: 160px;
+  row-gap: 24px;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+.blog-carte-grid::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to top, black, transparent);
+  width: 100%;
+  height: 20%;
+}
+.carte-blog {
+  position: relative;
+  border: 1px solid #313131;
+  width: 400px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.carte-blog p {
+  background-color: #313131;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+}
+.carte-blog img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.carte-blog img:hover {
+  scale: 1.3;
+  rotate: 10deg;
+}
+.carte-blog::before {
+  content: "11 OCT";
+  position: absolute;
+  background-color: red;
+  width: 98px;
+  height: 98px;
+  top: 0;
+  left: 0;
+  /* text */
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+  z-index: 1;
+}
+
+/* ==================== */
 
 /* footer*/
 footer {
@@ -295,8 +647,11 @@ footer button {
   #maincontent {
   }
 }
+
+/* MOBILE */
 @media (max-width: 1280px) {
   #bloghero {
+    margin-top: 8vh;
     height: 50vw;
     width: 100%;
   }
@@ -324,7 +679,35 @@ footer button {
     margin-left: 10rem;
     transition: all 0.2s ease-in-out;
   }
+
+  .blog-carte-grid {
+    grid-template-columns: repeat(2, 20%);
+    border: teal solid;
+    justify-content: start;
+  }
+  .carte-blog p {
+    font-size: 16px;
+  }
+  .maps-place {
+    display: none;
+  }
 }
+@media (max-width: 700px) {
+  .blog-carte-grid {
+    grid-template-columns: 90%;
+    gap: 32px;
+    height: 90%;
+    overflow: scroll;
+  }
+  .carte-blog {
+    height: 200px;
+    width: 320px;
+  }
+  .carte-blog p {
+    font-size: 1.5rem;
+  }
+}
+
 
 /* HERO SECTION PAGE EDetail */
 .hero-detail{
@@ -517,3 +900,4 @@ footer button {
   font-family: koulen;
 }
 /* HERO SECTION PAGE EDetail */
+
