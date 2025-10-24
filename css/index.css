@@ -175,11 +175,14 @@ body {
 
 .timer {
     height: 10rem;
-    font-size: 10px;
-    letter-spacing: 2px ;
+    font-size: 2.5rem;
+    letter-spacing: 3px ;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.timer * {
+  padding-right: 5px;
 }
 
 
@@ -208,6 +211,9 @@ body {
    .evenements {
         grid-template-columns : repeat(auto-filL , minmax(250px , 1fr)) ;
 
+    }
+    .timer {
+      font-size: 4rem;
     }
 }
 
@@ -249,6 +255,9 @@ body {
     .timer {
         font-size: 15px;
         letter-spacing: 3px;
+    }
+    .timer {
+      font-size: 5rem;
     }
 }
 @media (min-width: 1280px){
@@ -457,8 +466,6 @@ footer button {
   }
   #bloghero img {
     height: auto;
-  }
-  #maincontent {
   }
 }
 @media (max-width: 1280px) {
