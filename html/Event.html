@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
     <script src="../js/header.js" defer></script>
-    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/events-filter.js" defer></script>
+    <title>Evently | Events</title>
 </head>
 
 <body>
+    <!-- global header -->
     <header>
         <img src="../images/logo.svg" alt="bg" />
         <ul id="navbar">
@@ -18,166 +20,304 @@
             <li><a href="./Blog.html">Blogs</a></li>
             <li><a href="./FAQ.html">FAQ</a></li>
         </ul>
-
         <img id="menu" src="/images/icons8-menu-50.png" alt="menu" onclick="openMenu()" />
     </header>
 
-    <main>
-        <section class="En-tete">
-            <div>
-                <img src="../images/pexels-wolfgang-1002140-2747450.jpg" alt="Image header d'event">
-                <h1>HEADLINE</h1>
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, qui exercitationem incidunt sit illo
-                    vero voluptate dolor veniam eaque nam!</P>
-                <button>
-                    <a href="Event.html">Events</a>
-                </button>
-            </div>
-        </section>
+    <!-- Events Hero Section -->
+    <section class="events-hero-section">
+        <div class="events-hero-overlay"></div>
+        <img src="../images/pexels-artempodrez-6270262.jpg" alt="Events Background" class="events-hero-bg" />
+        <div class="events-hero-text">
+            <h1 class="events-main-title">HEADLINE</h1>
+            <p class="events-subtitle">demonstrate proven ecommerce layouts.</p>
+            <button class="events-cta-btn"><a href="Event.html">Events</a></button>
+        </div>
+    </section>
 
-        <section class="Filtrage">
-            <h2>SELECTION</h2>
-            <select name="selection" id="categorie">
-                <option value="">Categories </option>
-                <option value="Categorie 1">Categorie 1</option>
-                <option value="Categorie 2">Categorie 2</option>
-                <option value="Categorie 3">Categorie 3</option>
-                <option value="Categorie 4">Categorie 4</option>
+    <!-- Filters Section -->
+    <section class="events-filters-wrapper">
+        <h2 class="events-filters-title">SELECTION</h2>
+        <div class="events-filters-container">
+            <select class="events-filter-select" id="filter-categorie">
+                <option value="all">Catégorie</option>
+                <option value="musique">Musique</option>
+                <option value="sport">Sport</option>
+                <option value="culture">Culture</option>
             </select>
-            <select name="selection" id="Date">
-                <option value="">Dates </option>
-                <option value="Categorie 1">Date 1</option>
-                <option value="Categorie 2">Date 2</option>
-                <option value="Categorie 3">Date 3</option>
-                <option value="Categorie 4">Date 4</option>
+            <select class="events-filter-select" id="filter-date">
+                <option value="all">Date</option>
+                <option value="today">Aujourd'hui</option>
+                <option value="week">Cette semaine</option>
+                <option value="month">Ce mois</option>
             </select>
-            <select name="selection" id="Lieu">
-                <option value="">Lieux </option>
-                <option value="Categorie 1">Lieu 1</option>
-                <option value="Categorie 2">Lieu 2</option>
-                <option value="Categorie 3">Lieu 3</option>
-                <option value="Categorie 4">Lieu 4</option>
+            <select class="events-filter-select" id="filter-lieu">
+                <option value="all">Lieu</option>
+                <option value="casablanca">Casablanca</option>
+                <option value="rabat">Rabat</option>
+                <option value="marrakech">Marrakech</option>
             </select>
-        </section>
+        </div>
+    </section>
 
-        <section class="Events-Venir">
-            <H2>Les Événements à venir </H2>
-            <div class="events-Avenir">
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>14</strong><br><span>APR</span></div>
-                    <div class="event-info">
-                        <h3>Wonder Girls 2010 Wonder Girls World Tour San Francisco</h3>
-                        <p>Lieu 1</p>
+    <!-- Upcoming Events Section -->
+    <section class="events-upcoming-wrapper">
+        <h2 class="events-section-heading">SECTION Événements à venir</h2>
+        <div class="events-grid-layout" id="events-upcoming-grid">
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-conojeghuo-375893.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">20</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>20</strong><br><span>AUG</span></div>
-                    <div class="event-info">
-                        <h3>JYJ 2011 JYJ Worldwide Concert Barcelona</h3>
-                        <p>Lieu 2</p>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
                     </div>
-                </div>
+                </a>
+            </article>
 
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>07</strong><br><span>JUN</span></div>
-                    <div class="event-info">
-                        <h3>Super Junior SM Town Live 10 World Tour New York City</h3>
-                        <p>Lieu 3</p>
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-sebastian-ervi-866902-1763075.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">20</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>24</strong><br><span>MAI</span></div>
-                    <div class="event-info">
-                        <h3>Wonder Girls 2010 Wonder Girls World Tour San Francisco</h3>
-                        <p>Lieu 4</p>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
                     </div>
-                </div>
+                </a>
+            </article>
 
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>09</strong><br><span>NOV</span></div>
-                    <div class="event-info">
-                        <h3>Town Live 10 World Tour New York City</h3>
-                        <p>Lieu 5</p>
+            <article class="events-card-item" data-categorie="sport" data-date="month" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/images (1).jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">22</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>04</strong><br><span>APR</span></div>
-                    <div class="event-info">
-                        <h3>Wonder Girls 2010 Wonder Girls World Tour San Francisco</h3>
-                        <p>Lieu 6</p>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                </a>
+            </article>
 
-        <section class="Events-Passe">
-            <h2>Les Événements passés</h2>
-            <div class="events-Avenir">
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>14</strong><br><span>APR</span></div>
-                    <div class="event-info">
-                        <h3>Wonder Girls 2010 Wonder Girls World Tour San Francisco</h3>
-                        <p>Lieu 1</p>
+            <article class="events-card-item" data-categorie="culture" data-date="today" data-lieu="marrakech">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/austin-neill-247047-unsplash.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">25</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>20</strong><br><span>AUG</span></div>
-                    <div class="event-info">
-                        <h3>JYJ 2011 JYJ Worldwide Concert Barcelona</h3>
-                        <p>Lieu 2</p>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
                     </div>
-                </div>
+                </a>
+            </article>
 
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>07</strong><br><span>JUN</span></div>
-                    <div class="event-info">
-                        <h3>Super Junior SM Town Live 10 World Tour New York City</h3>
-                        <p>Lieu 3</p>
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-jonathanborba-3563173.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">28</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>24</strong><br><span>MAI</span></div>
-                    <div class="event-info">
-                        <h3>Wonder Girls 2010 Wonder Girls World Tour San Francisco</h3>
-                        <p>Lieu 4</p>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
                     </div>
-                </div>
+                </a>
+            </article>
 
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>09</strong><br><span>NOV</span></div>
-                    <div class="event-info">
-                        <h3>Town Live 10 World Tour New York City</h3>
-                        <p>Lieu 5</p>
+            <article class="events-card-item" data-categorie="sport" data-date="month" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-johannes-havn-835931-2417726.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">30</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="event-card">
-                    <img src="img/Rectangle 12.png" alt="Event 1">
-                    <div class="date"><strong>04</strong><br><span>APR</span></div>
-                    <div class="event-info">
-                        <h3>Wonder Girls 2010 Wonder Girls World Tour San Francisco</h3>
-                        <p>Lieu 6</p>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
                     </div>
-                </div>
-        </section>
-    </main>
+                </a>
+            </article>
 
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-oandremoura-2675648.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">20</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/r0m0_4-cd--ozQg9yo-unsplash.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">28</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="events-past-wrapper">
+        <h2 class="events-section-heading">SECTION Événements passés</h2>
+        <div class="events-grid-layout" id="events-past-grid">
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-artempodrez-6270262.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">15</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-wolfgang-1002140-2747450.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">28</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="culture" data-date="month" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-johannes-havn-835931-2417726.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">10</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="sport" data-date="week" data-lieu="marrakech">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-sebastian-ervi-866902-1763075.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">05</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="musique" data-date="today" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-conojeghuo-375893.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">01</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="culture" data-date="month" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/austin-neill-247047-unsplash.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">28</span>
+                            <span class="events-date-month">MAR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="culture" data-date="month" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/r0m0_4-cd--ozQg9yo-unsplash.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">10</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <img src="/images/logo.svg" alt="" />
         <!-- footer details -->
@@ -191,7 +331,7 @@
             </details>
             <details>
                 <summary>Liens</summary>
-                <p></p><a href="/index.html">Home</a></p>
+                <p><a href="/index.html">Home</a></p>
                 <p><a href="/index.html">Events</a></p>
                 <p><a href="/index.html">faq</a></p>
             </details>
@@ -201,6 +341,7 @@
                 <div class="btn-mail" style="display: flex">
                     <input type="email" />
                     <button>></button>
+                </div>
             </details>
         </div>
 
@@ -228,15 +369,14 @@
             </div>
         </div>
         <h3 style="
-            margin-top: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         ">
             Copyright2025-Evently
         </h3>
     </footer>
-
 </body>
 
-</html>
+</html>                                     
