@@ -776,12 +776,12 @@ footer button {
   justify-content: space-between;
 }
 
-.galerie {
+#galerie {
   padding: 60px 5%;
   text-align: center;
 }
 
-.galerie h2 {
+#galerie h2 {
   color: #980000;
   font-size: 2.5em;
   margin-bottom: 40px;
@@ -862,7 +862,7 @@ footer button {
   font-size: 1.2rem;
 }
 /* Tablettes*/
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .grid-galerie {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -883,7 +883,7 @@ footer button {
     width: 80%;
   }
 
-  .galerie h2,
+  #galerie h2,
   .Evenement-sim h2 {
     font-size: 2em;
   }
@@ -893,8 +893,33 @@ footer button {
     font-size: 1.1rem;
   }
 }
+/* Mobile */
+@media screen and (max-width: 480px) {
+  #galerie {
+    padding: 40px 5%;
+  }
 
+  .Evenement-sim {
+    padding: 50px 5%;
+  }
 
+  #galerie h2,
+  .Evenement-sim h2 {
+    font-size: 1.7em;
+  }
+
+  .carte-ev p,
+  .Evenement-sim p,
+  .img-ev p,
+  .img-evv p {
+    font-size: 1rem;
+  }
+
+  .img-evv img {
+    width: 90%;
+    height: auto;
+  }
+}
 .commentaires {
   padding: 60px 5%;
   margin-bottom: 90px;
