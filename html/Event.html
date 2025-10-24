@@ -2,54 +2,381 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/header.js" defer></script>
+    <script src="../js/events-filter.js" defer></script>
+    <title>Evently | Events</title>
 </head>
 
 <body>
+    <!-- global header -->
     <header>
-        <nav>
-
-        </nav>
+        <img src="../images/logo.svg" alt="bg" />
+        <ul id="navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./Event.html">Events</a></li>
+            <li><a href="./Blog.html">Blogs</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
+        </ul>
+        <img id="menu" src="/images/icons8-menu-50.png" alt="menu" onclick="openMenu()" />
     </header>
 
-    <main>
-        <section class="En-tete">
-            <div>
-                <img src="../images/pexels-wolfgang-1002140-2747450.jpg" alt="Image header d'event">
-                <h1>HEADLINE</h1>
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, qui exercitationem incidunt sit illo vero voluptate dolor veniam eaque nam!</P>
-                <button>
-                    <a href="Event.html">Events</a>
-                </button>
-            </div>
-        </section>
+    <!-- Events Hero Section -->
+    <section class="events-hero-section">
+        <div class="events-hero-overlay"></div>
+        <img src="../images/pexels-artempodrez-6270262.jpg" alt="Events Background" class="events-hero-bg" />
+        <div class="events-hero-text">
+            <h1 class="events-main-title">HEADLINE</h1>
+            <p class="events-subtitle">demonstrate proven ecommerce layouts.</p>
+            <button class="events-cta-btn"><a href="Event.html">Events</a></button>
+        </div>
+    </section>
 
-        <section class="Filtrage">
-            <h2>SELECTION</h2>
-            <select name="selection" id="event-section">
-                <option value="">Categories</option>
-                <option value="">Categories</option>
-                <option value="">Categories</option>
-                <option value="">Categories</option>
-                <option value="">Categories</option>
+    <!-- Filters Section -->
+    <section class="events-filters-wrapper">
+        <h2 class="events-filters-title">SELECTION</h2>
+        <div class="events-filters-container">
+            <select class="events-filter-select" id="filter-categorie">
+                <option value="all">Catégorie</option>
+                <option value="musique">Musique</option>
+                <option value="sport">Sport</option>
+                <option value="culture">Culture</option>
             </select>
-        </section>
+            <select class="events-filter-select" id="filter-date">
+                <option value="all">Date</option>
+                <option value="today">Aujourd'hui</option>
+                <option value="week">Cette semaine</option>
+                <option value="month">Ce mois</option>
+            </select>
+            <select class="events-filter-select" id="filter-lieu">
+                <option value="all">Lieu</option>
+                <option value="casablanca">Casablanca</option>
+                <option value="rabat">Rabat</option>
+                <option value="marrakech">Marrakech</option>
+            </select>
+        </div>
+    </section>
 
-        <section class="Events-Venir">
+    <!-- Upcoming Events Section -->
+    <section class="events-upcoming-wrapper">
+        <h2 class="events-section-heading">SECTION Événements à venir</h2>
+        <div class="events-grid-layout" id="events-upcoming-grid">
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-conojeghuo-375893.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">20</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
 
-        </section>
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-sebastian-ervi-866902-1763075.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">20</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
 
-        <section class="Events-Passe">
+            <article class="events-card-item" data-categorie="sport" data-date="month" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/images (1).jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">22</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
 
-        </section>
-    </main>
+            <article class="events-card-item" data-categorie="culture" data-date="today" data-lieu="marrakech">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/austin-neill-247047-unsplash.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">25</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
 
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-jonathanborba-3563173.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">28</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="sport" data-date="month" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-johannes-havn-835931-2417726.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">30</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-oandremoura-2675648.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">20</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/r0m0_4-cd--ozQg9yo-unsplash.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">28</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="events-past-wrapper">
+        <h2 class="events-section-heading">SECTION Événements passés</h2>
+        <div class="events-grid-layout" id="events-past-grid">
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-artempodrez-6270262.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">15</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="musique" data-date="week" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-wolfgang-1002140-2747450.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">28</span>
+                            <span class="events-date-month">MAI</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="culture" data-date="month" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-johannes-havn-835931-2417726.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">10</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="sport" data-date="week" data-lieu="marrakech">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-sebastian-ervi-866902-1763075.jpg" alt="Event"
+                            class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">05</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="musique" data-date="today" data-lieu="casablanca">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/pexels-conojeghuo-375893.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">01</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="culture" data-date="month" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/austin-neill-247047-unsplash.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">28</span>
+                            <span class="events-date-month">MAR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="events-card-item" data-categorie="culture" data-date="month" data-lieu="rabat">
+                <a href="EDetail.html" class="events-card-link">
+                    <div class="events-card-image-wrapper">
+                        <img src="../images/r0m0_4-cd--ozQg9yo-unsplash.jpg" alt="Event" class="events-card-img" />
+                        <div class="events-card-date-badge">
+                            <span class="events-date-day">10</span>
+                            <span class="events-date-month">AVR</span>
+                        </div>
+                    </div>
+                    <div class="events-card-info">
+                        <h3 class="events-card-title">Performance live sur la grande scène</h3>
+                        <p class="events-card-location">Lieu</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
+        <img src="/images/logo.svg" alt="" />
+        <!-- footer details -->
+        <!-- mobile -->
+        <div class="responsive-footer">
+            <details>
+                <summary>Contact</summary>
+                <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+                <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+                <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+            </details>
+            <details>
+                <summary>Liens</summary>
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/index.html">Events</a></p>
+                <p><a href="/index.html">faq</a></p>
+            </details>
+            <details>
+                <summary>Email</summary>
+                <p>Pour plus d'information, contacter sur l'email</p>
+                <div class="btn-mail" style="display: flex">
+                    <input type="email" />
+                    <button>></button>
+                </div>
+            </details>
+        </div>
 
+        <!-- desktop -->
+        <div class="footer-content">
+            <div class="f-detail">
+                <h2>Contact</h2>
+                <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+                <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+                <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+            </div>
+            <div class="f-detail">
+                <h2>liens</h2>
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/index.html">Events</a></p>
+                <p><a href="/index.html">faq</a></p>
+            </div>
+            <div class="f-detail">
+                <h2>Email</h2>
+                <p>Pour plus d'information, contacter sur l'email</p>
+                <div class="btn-mail" style="display: flex">
+                    <input type="email" />
+                    <button>></button>
+                </div>
+            </div>
+        </div>
+        <h3 style="
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        ">
+            Copyright2025-Evently
+        </h3>
     </footer>
-
 </body>
 
 </html>
