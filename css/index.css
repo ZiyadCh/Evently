@@ -397,11 +397,19 @@ footer button {
     height: auto;
   }
   #maincontent {
+    justify-content: center;
   }
+}
+
+.maps-place-mobile {
+  display: none;
 }
 
 /* MOBILE */
 @media (max-width: 1280px) {
+  .maps-place-mobile {
+    display: block;
+  }
   #bloghero {
     margin-top: 8vh;
     height: 50vw;
@@ -448,10 +456,12 @@ footer button {
   .blog-carte-grid-load {
     grid-template-columns: 90%;
     gap: 32px;
-    height: 50%;
+    height: auto;
+    justify-content: center;
   }
   .blog-carte-grid {
     grid-template-columns: 90%;
+    justify-content: center;
     gap: 32px;
     height: 90%;
     overflow: hidden;
