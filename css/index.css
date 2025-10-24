@@ -175,7 +175,7 @@ header img {
     top: 0;
     background-color: #000;
     animation: drop 0.5s ease-in-out;
-    border: nonedd;
+    border: none;
   }
   header a {
     animation: none;
@@ -452,6 +452,75 @@ footer button {
     display: none;
   }
 }
+@media (min-width: 700px) {
+  #maincontent {
+    justify-content: center;
+  }
+  .maps-place-mobile {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .maps-place-mobile iframe {
+    width: 50%;
+  }
+  #bloghero {
+    margin-top: 8vh;
+    height: 50vw;
+    width: 100%;
+  }
+  .footer-content {
+    display: none;
+  }
+  .responsive-footer {
+    display: block;
+  }
+  summary {
+    font-size: 24px;
+    width: 90%;
+    border-bottom: white solid;
+    margin: 20px;
+    transition: all 0.5s;
+  }
+  summary::marker {
+    color: #000;
+  }
+  details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .blog-carte-grid {
+    grid-template-columns: repeat(2, 10%);
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .blog-carte-grid-load {
+    grid-template-columns: repeat(2, 10%);
+    gap: 32px;
+    height: auto;
+    justify-content: center;
+  }
+  .carte-blog {
+    height: 200px;
+    width: 320px;
+  }
+  .carte-blog p {
+    font-size: 16px;
+  }
+  .maps-place {
+    display: none;
+  }
+}
+
+/* small phone */
 @media (max-width: 700px) {
   .blog-carte-grid-load {
     grid-template-columns: 90%;
@@ -463,7 +532,7 @@ footer button {
     grid-template-columns: 90%;
     justify-content: center;
     gap: 32px;
-    height: 90%;
+    height: 100vh;
     overflow: hidden;
   }
   .carte-blog {
