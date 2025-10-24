@@ -620,6 +620,13 @@ header img {
 
 /* Large Desktop - 1440px+ */
 @media (min-width: 1440px) {
+    .Filtrage,
+    .Events-Venir,
+    .Events-Passe {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
   .Filtrage,
   .Events-Venir,
   .Events-Passe {
@@ -1512,5 +1519,7 @@ footer button {
   font-size: 2em;
   font-family: koulen;
 }
+
 /* HERO SECTION PAGE EDetail */
+
 
