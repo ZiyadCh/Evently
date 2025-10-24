@@ -672,7 +672,7 @@ header img {
   width: 100%;
   gap: 160px;
   row-gap: 24px;
-  justify-content: space-around;
+  justify-content: center;
   overflow: hidden;
   height: 100vh;
   position: relative;
@@ -913,15 +913,15 @@ footer button {
 
   .blog-carte-grid {
     grid-template-columns: repeat(2, 10%);
-    width: 70%;
-    overflow: visible;
+    width: 100%;
+    gap: 32px;
   }
 
   .blog-carte-grid-load {
     grid-template-columns: repeat(2, 10%);
-    gap: 32px;
+    width: 60%;
+    justify-content: space-around;
     height: auto;
-    justify-content: center;
   }
   .carte-blog {
     height: 200px;
