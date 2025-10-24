@@ -1,14 +1,16 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Evently</title>
- </head>
- <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/index.css">
+   <title>Evently</title>
+</head>
+
+<body>
    <main>
-      
+
       <header>
          <img src="../images/logo.svg" alt="bg" />
          <ul id="navbar">
@@ -22,9 +24,17 @@
 
       </header>
 
+      <section class="hero__section">
+          <div class="hero-caroseil"> 
+            <div class="hero-caroseil-1"></div>
+            <div class="hero-caroseil-2"></div>
+            <div class="hero-caroseil-3"></div>
+            
+        </div>
+         <div class="hero_contenu" >
       <section class="hero">
 
-         <div class="hero_contenu" >
+         <div class="hero_contenu">
             <h1>Eventfy</h1>
             <h2>rok event 2025</h2>
             <button>ABOUT US</button>
@@ -34,19 +44,166 @@
 
       <section class="about">
          <div class="about_everly">
-            <h3>About eventfy</h3>
-            <p>Découvrez, gérez et réservez vos événements préférés en toute simplicité avec Eventify ! Concerts, festivals, conférences, expositions, ateliers ou soirées exclusives — notre plateforme rassemble les meilleurs événements autour de vous. Avec Eventify, chaque événement devient une expérience unique à portée de clic.</p>
+            <h3 class="about_everly--sizeTitle">About eventfy</h3>
+            <p class="about_everly--sizeP">Decouvrez, gerez et reservez vos evenements preferes en toute simplicite avec
+               Eventify ! Concerts, festivals, conferences, expositions, ateliers ou soirees exclusives — notre
+               plateforme rassemble les meilleurs evenements autour de vous. Avec Eventify, chaque evenement devient une
+               experience unique à portee de clic.</p>
             <div class="about_everly-img">
+               <img src="images/r0m0_4-cd--ozQg9yo-unsplash.jpg" alt="party">
+               <p>Rejoignez notre communaute et ne manquez plus aucun moment fort ! Explorez, partagez et vivez vos passions a travers les evenements qui vous inspirent.</p>
+
                <img src="images/r0m0_4-cd--ozQg9yo-unsplash.jpg" alt="party_human">
-               <p>Rejoignez notre communauté et ne manquez plus aucun moment fort ! Explorez, partagez et vivez vos passions à travers les événements qui vous inspirent.</p>
+               <p>Rejoignez notre communaute et ne manquez plus aucun moment fort ! Explorez, partagez et vivez vos
+                  passions a travers les evenements qui vous inspirent.</p>
+
             </div>
          </div>
 
       </section>
 
-   </main>
+
+      <section>
+         <div class="timer">
+            <span class="jour"></span>
+            <span> JOURS :</span>
+            <span class="hour"></span>
+            <span> H : </span>
+            <span class="min"></span>
+            <span> MIN :</span>
+            <span class="sec"></span>
+         </div>
+      </section>
+
+
+      <section>
+         <div class="evenements">
+            <div class="evenements__cotent">
+               <img src="images/austin-neill-247047-unsplash.jpg" alt="rap_event">
+               <h5>RAP EVENT</h5>
+            </div>
+            <div class="evenements__cotent">
+               <img src="images/images (1).jpg" alt="rock_img">
+               <h5>ROCK</h5>
+            </div>
+            <div class="evenements__cotent">
+               <img src="images/istockphoto-157384076-2048x2048.jpg" alt="dance_event">
+               <h5>DANCE EVENT</h5>
+            </div>
+         </div>
+      </section>
+
+      <section class="partner__section">
+        <div class="partner">
+        <h3>partner</h3>
+        <div class="slider">
+            <div class="partner__images">
+                <img src="images/logo-1.png" alt="logo-youtube">
+                <img src="images/logo-2.png" alt="logo-spotify">
+                <img src="images/logo-3.png" alt="logo-vimeo">
+                <img src="images/logo-4.png" alt="logo-shoundcloud">
+                <img src="images/logo-5.png" alt="logo-music">
+                <img src="images/w.png" alt="logo-audiojungle">
+            </div>
+            <div class="partner__images">
+                <img src="images/logo-1.png" alt="logo-youtube">
+                <img src="images/logo-2.png" alt="logo-spotify">
+                <img src="images/logo-3.png" alt="logo-vimeo">
+                <img src="images/logo-4.png" alt="logo-shoundcloud">
+                <img src="images/logo-5.png" alt="logo-music">
+                <img src="images/w.png" alt="logo-audiojungle">
+            </div>
+        </div>
+            
+        </div>
+    </section>
+
     
- </body>
- </html>
+   </main>
+
+
+   <!-- Footer -->
+   <footer>
+      <img src="/images/logo.svg" alt="" />
+      <!-- footer details -->
+      <!-- mobile -->
+      <div class="responsive-footer">
+         <details>
+            <summary>Contact</summary>
+            <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+            <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+            <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+         </details>
+         <details>
+            <summary>Liens</summary>
+            <p></p><a href="/index.html">Home</a></p>
+            <p><a href="/index.html">Events</a></p>
+            <p><a href="/index.html">faq</a></p>
+         </details>
+         <details>
+            <summary>Email</summary>
+            <p>Pour plus d'information, contacter sur l'email</p>
+            <div class="btn-mail" style="display: flex">
+               <input type="email" />
+               <button>></button>
+         </details>
+      </div>
+
+      <!-- desktop -->
+      <div class="footer-content">
+        <div class="f-detail">
+          <h2>Contact</h2>
+          <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+          <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+          <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+        </div>
+        <div class="f-detail">
+          <h2>liens</h2>
+          <p><a href="#">Home</a></p>
+          <p><a href="/html/Event.html">Events</a></p>
+          <p><a href="/html/FAQ.html">faq</a></p>
+        </div>
+        <div class="f-detail">
+          <h2>Email</h2>
+          <p>Pour plus d'information, contacter sur l'email</p>
+          <div class="btn-mail" style="display: flex">
+            <input type="email" />
+            <button>></button>
+          </div>
+        </div>
+         <div class="f-detail">
+            <h2>Contact</h2>
+            <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+            <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+            <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+         </div>
+         <div class="f-detail">
+            <h2>liens</h2>
+            <p><a href="/index.html">Home</a></p>
+            <p><a href="/index.html">Events</a></p>
+            <p><a href="/index.html">faq</a></p>
+         </div>
+         <div class="f-detail">
+            <h2>Email</h2>
+            <p>Pour plus d'information, contacter sur l'email</p>
+            <div class="btn-mail" style="display: flex">
+               <input type="email" />
+               <button>></button>
+            </div>
+         </div>
+      </div>
+      <h3 style="
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        ">
+         Copyright2025-Evently
+      </h3>
+   </footer>
+
+</body>
+
+</html>
 
 <script src="../js/header.js"></script>
