@@ -18,7 +18,7 @@ let openMenu = () => {
 //       partie js for home paig
 // =================================
 
-let mate = new Date(2025 , 9 , 28, 23 , 59 ,59).getTime() ;
+let mate = new Date(2025 , 10 , 15, 23 , 59 ,59).getTime() ;
 
 let counter = setInterval(() => {
 
