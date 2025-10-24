@@ -776,38 +776,38 @@ footer button {
   justify-content: space-between;
 }
 
-.galerie h2{
-    color: #980000;
-    margin-bottom: 20px;
-    font-size: 2.5em;
-    text-align: center;
-}
-.grid-galerie{
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows:300px 300px ;
-  gap: 190px;
+.galerie {
+  padding: 60px 5%;
   text-align: center;
-  padding: 70px;
-}
-.carte-ev img{
-  width: 70%;
-  height: 90%;
-  margin-bottom: -10px ;
-}
-.carte-ev p {
-  width: 70%;    
-  margin: 0 auto; 
-  border: 2px solid #980000;
-  padding: 8px 0;
-  font-size: 2rem;
-  
 }
 
- .Evenement-sim {
-  padding: 70px;
-  color: white;
-  font-family: "Koulen";
+.galerie h2 {
+  color: #980000;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.grid-galerie {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  justify-items: center;
+}
+
+.carte-ev img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+} 
+.carte-ev p {
+  margin-top: 10px;
+  border: 2px solid #980000;
+  padding: 8px;
+  font-size: 1.3rem;
+}
+
+.Evenement-sim {
+  padding: 70px 5%;
   text-align: center;
 }
 
@@ -819,29 +819,33 @@ footer button {
 
 .Evenement-sim p {
   font-size: 1.3rem;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .grid-devent {
   display: grid;
-  grid-template-columns:1fr 1fr;
-  gap: 120px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   justify-items: center;
   align-items: center;
 }
 
-.img-ev img {
+.img-ev img{
   width: 80%;
-  height: 85%;
+  height: 300px;
   object-fit: cover;
-  margin-bottom: -10px;
 }
-.img-ev p {
+
+.img-ev p{
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto;
   border: 2px solid #980000;
   padding: 8px 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.img-evv {
+  margin-top: 40px;
 }
 .img-evv img {
   width: 35%;
@@ -852,11 +856,44 @@ footer button {
 }
 .img-evv p {
   width: 35%;
-  margin: 0auto;
+  margin: 10px auto;
   border: 2px solid #980000;
-  margin: 0 auto ;
-  font-size: 1.5rem;
+  padding: 8px 0;
+  font-size: 1.2rem;
 }
+/* Tablettes*/
+@media screen and (max-width: 768px) {
+  .grid-galerie {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .grid-devent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .img-ev img,
+  .img-ev p {
+    width: 100%;
+  }
+
+  .img-evv img,
+  .img-evv p {
+    width: 80%;
+  }
+
+  .galerie h2,
+  .Evenement-sim h2 {
+    font-size: 2em;
+  }
+
+  .carte-ev p,
+  .Evenement-sim p {
+    font-size: 1.1rem;
+  }
+}
+
 
 .commentaires {
   padding: 60px 5%;
