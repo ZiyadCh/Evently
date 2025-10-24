@@ -5,7 +5,7 @@ a {
   font-size: 16px;
 }
 * {
-    margin: 0;
+  margin: 0;
 }
 
 html {
@@ -15,91 +15,89 @@ html {
 }
 
 .hero {
+
     background-image: url(../images/heroBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100vw;
     height: 100vh;
+
+  background-image: url(../images/heroBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+
 }
 
 .hero_contenu {
-    display: flex;
-    flex-direction : column ;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 100vh;
-    color: white;
-    text-shadow: 0 0 10px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100vh;
+  color: white;
+  text-shadow: 0 0 10px black;
 }
-.hero_contenu button{
-    font-size: unset; 
-    max-width: 100px ;
-    padding: 5px 7px ;
-    border-radius: 3px ;
-    border: 1px solid black ;
-    background-color: #B90000;
+.hero_contenu button {
+  font-size: unset;
+  max-width: 100px;
+  padding: 5px 7px;
+  border-radius: 3px;
+  border: 1px solid black;
+  background-color: #b90000;
 }
 
-.about_everly  {
-    position: relative;
-    background-size : cover;
-    background-position : center center ;
-    width:  70% ;
-    height: 50vh;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    margin : 2% auto ;
-    padding : 20px ;
-
+.about_everly {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  width: 70%;
+  height: 50vh;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 2% auto;
+  padding: 20px;
 }
 
 .about_everly:before {
-    content : '' ;
-    position : absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height : 100%  ;
-    background-image : url(../images/alexiz-mora-CGEpY2WaNHI-unsplash.jpg) ;
-    background-size: cover;
-    background-position : center  ;
-    opacity: 0.5;
-    border-radius: 10px;
-    z-index: -1;
-    
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/alexiz-mora-CGEpY2WaNHI-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  border-radius: 10px;
+  z-index: -1;
 }
 
-
 .about_everly:last-child {
-    margin-top: 10%;
+  margin-top: 10%;
 }
 
 .about_everly * {
-    padding: 2px 0;
+  padding: 2px 0;
 }
 .about_everly p {
-    width: 40%;
+  width: 40%;
 }
 
 .about_everly-img {
-    display: flex;
-    
-
-    
+  display: flex;
 }
 
 .about_everly-img img {
-    width: 50%;
-    height: 50%;
-
+  width: 50%;
+  height: 50%;
 }
-
-
-
-
 
 body {
   background: #000;
@@ -204,7 +202,7 @@ header img {
     }
   }
 }
-/* 000000000000000000000000000000000 */
+
 /* =========================================== */
 /* blog*/
 /* =========================================== */
@@ -236,7 +234,11 @@ header img {
 #maincontent {
   height: 100vw;
   background: #000;
+  display: flex;
 }
+.content-blog {
+  display: flex;
+  flex-direction: column;
 
 
 
@@ -506,6 +508,87 @@ header img {
         padding: 3rem 2rem;
     }
 }
+
+  align-items: center;
+}
+.maps-place {
+  width: 30vw;
+  border-left: red solid;
+  height: 70vh;
+}
+#afficher {
+  font-family: "koulen";
+  border: none;
+  padding: 1em;
+  margin: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  color: white;
+  font-size: 24px;
+  background: red;
+}
+.blog-carte-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  width: 100%;
+  gap: 160px;
+  row-gap: 24px;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+.blog-carte-grid::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to top, black, transparent);
+  width: 100%;
+  height: 20%;
+}
+.carte-blog {
+  position: relative;
+  border: 1px solid #313131;
+  width: 400px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.carte-blog p {
+  background-color: #313131;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+}
+.carte-blog img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.carte-blog img:hover {
+  scale: 1.3;
+  rotate: 10deg;
+}
+.carte-blog::before {
+  content: "11 OCT";
+  position: absolute;
+  background-color: red;
+  width: 98px;
+  height: 98px;
+  top: 0;
+  left: 0;
+  /* text */
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+  z-index: 1;
+}
+
+/* ==================== */
+
 /* footer*/
 footer {
   border-top: solid red;
@@ -561,11 +644,12 @@ footer button {
   #bloghero img {
     height: auto;
   }
-  #maincontent {
-  }
 }
+
+/* MOBILE */
 @media (max-width: 1280px) {
   #bloghero {
+    margin-top: 8vh;
     height: 50vw;
     width: 100%;
   }
@@ -592,5 +676,32 @@ footer button {
     align-items: center;
     margin-left: 10rem;
     transition: all 0.2s ease-in-out;
+  }
+
+  .blog-carte-grid {
+    grid-template-columns: repeat(2, 20%);
+    border: teal solid;
+    justify-content: start;
+  }
+  .carte-blog p {
+    font-size: 16px;
+  }
+  .maps-place {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .blog-carte-grid {
+    grid-template-columns: 90%;
+    gap: 32px;
+    height: 90%;
+    overflow: scroll;
+  }
+  .carte-blog {
+    height: 200px;
+    width: 320px;
+  }
+  .carte-blog p {
+    font-size: 1.5rem;
   }
 }
