@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Koulen";
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.hero {
+    background: url('/images/subheader.jpg') center / cover no-repeat;
+    height: 60vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 1rem 1.5rem;
+}
+
+.menu-icon {
+    height: 18px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    background-color: red;
+    height: 3px;
+    border-radius: 3px;
+}
+
+.nav {
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 100%;
+    background-color: black;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.nav.active {
+    display: flex;
+}
+
+.hero h2 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15%;
+    font-size: 2.5rem;
+}
+
+.hero h2 span {
+    padding-left: 90px;
+}
+
+
+.faq {
+    padding: 1.5rem;
+}
+
+.faq-item {
+  margin: 1rem 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow {
+    transition: 0.7s ease;
+}
+
+.faq-answer {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    color: #aaa;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.faq-item.active .faq-answer{
+  max-height: 100px;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  border: 2px solid #ffffffbd;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+  background: #ff0000;
+  border: none;
+  color: #fff;
+  padding: 5px 100px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  transition: 0.7s ease;
+}
+
+.contact-form button:hover {
+    background-color: white;
+    color: red;
+    transform: scale(1.1);
+}
+
+.contact-info iframe {
+    border: none;
+    width: 100%;
+}
+
+
+.Socials {
+    margin-top: 10%;
+}
+
+.Socials a{
+    color: white;
+    margin-left: 10%;
+}
+
+.Socials a:hover {
+    color: #ff0000;
+    transform: scale(1.7);
+}
