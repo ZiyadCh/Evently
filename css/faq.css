@@ -90,6 +90,12 @@ body {
   .nav a {
     border: none;
     font-size: 1.4rem;
+    transition: 0.5s ease;
+  }
+
+  .nav a:hover {
+    color: red;
+    transform: scale(1.4);
   }
 
   .hero h2 {
@@ -196,6 +202,19 @@ body {
         flex: 1;
         width: 100%;
         padding-left: 10%;
+    }
+
+    .faq-question p {
+        font-size: 1.5rem;
+    }
+
+    .arrow {
+        font-size: 4rem;
+    }
+
+    .faq-answer p {
+        font-size: 1.5rem;
+        padding-left: 5%;
     }
 }
 
