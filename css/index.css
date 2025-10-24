@@ -233,6 +233,7 @@ header img {
   width: 30vw;
   border-left: red solid;
   height: 70vh;
+  padding: 2rem;
 }
 #afficher {
   font-family: "koulen";
