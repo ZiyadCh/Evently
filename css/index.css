@@ -1,19 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+
+/*======================= 
+     HOME PAGE CSS 
+=========================*/
+
 a {
   text-decoration: none;
   color: white;
   font-size: 16px;
 }
+
+
 * {
-  margin: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
 }
 
 html {
+
   font-size: 16px;
   color: white;
   font-family: "Koulen";
 }
+
 .hero {
+
+    background-image: url(../images/heroBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
   background-image: url(../images/heroBackground.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,77 +40,243 @@ html {
   width: 100vw;
   height: 100vh;
 }
+
 .hero_contenu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  height: 100vh;
-  color: white;
-  text-shadow: 0 0 10px black;
+    display: flex;
+    flex-direction : column ;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100vh;
+    color: white;
+    text-shadow: 0 0 10px black;
 }
-.hero_contenu button {
-  font-size: unset;
-  max-width: 100px;
-  padding: 5px 7px;
-  border-radius: 3px;
-  border: 1px solid black;
-  background-color: #b90000;
+.hero_contenu button{
+    font-size: unset; 
+    max-width: 100px ;
+    padding: 5px 7px ;
+    border-radius: 3px ;
+    border: 1px solid black ;
+    background-color: #B90000;
 }
 
-.about_everly {
-  position: relative;
-  background-size: cover;
-  background-position: center center;
-  width: 70%;
-  height: 50vh;
-  font-size: 10px;
-  display: flex;
-  flex-direction: column;
-  margin: 2% auto;
-  padding: 20px;
+.about_everly  {
+    position: relative;
+    width:  70% ;
+    /* height: 50vh; */
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    margin : 2% auto ;
+    padding : 20px ;
+
 }
 
 .about_everly:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/alexiz-mora-CGEpY2WaNHI-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  border-radius: 10px;
-  z-index: -1;
+    content : '' ;
+    position : absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height : 100%  ;
+    background-image : url(../images/alexiz-mora-CGEpY2WaNHI-unsplash.jpg) ;
+    background-size: cover;
+    background-position : center  ;
+    opacity: 0.5;
+    border-radius: 15px;
+    z-index: -1;  
 }
 
+
 .about_everly:last-child {
-  margin-top: 10%;
+    margin-top: 10%;
 }
 
 .about_everly * {
-  padding: 2px 0;
+    padding: 2px 0;
 }
 .about_everly p {
-  width: 40%;
+    width: 70%;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.about_everly h3 {
+    font-size : 15px ;
 }
 
 .about_everly-img {
-  display: flex;
+    display: grid;
+    grid-template-columns : 1fr 1fr;
+    margin-top : 10px ;
+    
+
+    
+}
+.about_everly-img p {
+    width: 100%;
+    
+
 }
 
 .about_everly-img img {
-  width: 50%;
-  height: 50%;
+    width: 90%;
+    height: 100%;
+    border-radius : 15px;
+    
 }
+
+.evenements{
+    width: 80%;
+    margin : 0 auto;
+    display: grid;
+    /* grid-template-columns : repeat(auto-fill , minmax(200px , 1fr)) ; */
+
+}
+
+.evenements__cotent img {
+    width: 100%;
+    height : 100% ;
+
+}
+
+
+.evenements__cotent {
+    position: relative;
+}
+
+.evenements__cotent h5{
+    position : absolute;
+    top: 80%;
+    left: 50% ;
+    transform : translateX(-50%) ;
+    font-size : 15PX ;
+    text-shadow : 0 0 10px black ;
+    letter-spacing: 2px;
+}
+
+
+.partner {
+    width: 80%;
+    margin: 10% auto;
+}
+
+.partner h3 {
+    justify-self: center;
+    font-size : 20px ;
+}
+
+.partner__images img {
+    width: 100%;
+}
+.partner__images {
+    display: grid;
+    grid-template-columns : repeat(auto-fill , minmax(125px , 1fr)) ;
+    gap: 20px;
+}
+
 
 body {
   background: #000;
   overflow-x: hidden;
 }
+
+.timer {
+    height: 10rem;
+    font-size: 10px;
+    letter-spacing: 2px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+   .evenements {
+        grid-template-columns : repeat(auto-filL , minmax(250px , 1fr)) ;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .about_everly {
+        padding-left: 40px;
+        display : flex;
+    }
+
+    .about_everly h3 
+    ,.about_everly p  {
+        font-size : 20px;
+        width: 70%;  
+        align-self: center;
+    } 
+    .about_everly h3 {
+        font-size : 30px;
+        text-align : center ; 
+        letter-spacing: 3px;
+    }
+    .about_everly-img img {
+        width: 70%;
+        height: 100%;
+        border-radius : 35px;
+        justify-self : end;
+        padding : 0 20px 0 0;
+    }
+
+    .evenements {
+        display: grid;
+        grid-template-columns : repeat(3 , minmax(100px , 1fr)) ;
+
+    }
+    .partner__images {
+            grid-template-columns : repeat(6 , minmax(120px , 1fr)) ;
+
+    } 
+    .timer {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+}
+@media (min-width: 1280px){
+    /* .about_everly p {
+    width: 70%;
+    
+    letter-spacing: 1px;
+} */
+
+}
+
+
+
+
+/*======================= 
+    END HOME PAGE CSS 
+=========================*/
+
+
+
 /* ================================== */
 /* ====== Header ======*/
 li {
@@ -180,6 +365,7 @@ header img {
   header a {
     animation: none;
   }
+  
 
   /* dropdown animation */
   @keyframes drop {
@@ -191,7 +377,7 @@ header img {
     }
   }
 }
-
+/* 000000000000000000000000000000000 */
 /* =========================================== */
 /* blog*/
 /* =========================================== */
@@ -224,17 +410,276 @@ header img {
   height: 100vw;
   background: #000;
   display: flex;
+  height: auto;
 }
-.content-blog {
-  display: flex;
-  flex-direction: column;
 
-  align-items: center;
+.content-blog {
+  flex-direction: column;
+}
+
+/* Section En-tete (Hero) */
+.En-tete {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.En-tete div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.En-tete img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.En-tete h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 0 0 10px black;
+}
+
+.En-tete p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #fff;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.En-tete button {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #B90000;
+    border: 1px solid black;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.En-tete button:hover {
+    background-color: #ff0000;
+}
+
+.En-tete button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Section Filtrage */
+.Filtrage {
+    padding: 2rem 1rem;
+    background-color: #000;
+}
+
+.Filtrage h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.Filtrage select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.Filtrage select:focus {
+    outline: none;
+    border-color: #B90000;
+}
+
+/* Events Cards Sections */
+.Events-Venir,
+.Events-Passe {
+    padding: 2rem 1rem;
+    background-color: #000;
+}
+
+.Events-Venir h2,
+.Events-Passe h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.events-Avenir {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.event-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.date {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #B90000;
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    border-radius: 3px;
+}
+
+.date strong {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.date span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.event-info {
+    padding: 1rem;
+}
+
+.event-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.event-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Tablet - 768px+ */
+@media (min-width: 768px) {
+    .events-Avenir {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .En-tete h1 {
+        font-size: 3.5rem;
+    }
+
+    .En-tete p {
+        font-size: 1.1rem;
+    }
+
+    .Filtrage {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        align-items: end;
+        padding: 2rem 2rem;
+    }
+
+    .Filtrage h2 {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+    .Filtrage select {
+        margin-bottom: 0;
+    }
+
+    .Events-Venir h2,
+    .Events-Passe h2 {
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+    .Events-Venir,
+    .Events-Passe {
+        padding: 2rem 2rem;
+    }
+}
+
+/* Desktop - 1024px+ */
+@media (min-width: 1024px) {
+    .events-Avenir {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .En-tete {
+        height: 70vh;
+    }
+
+    .En-tete h1 {
+        font-size: 4.5rem;
+    }
+
+    .Filtrage,
+    .Events-Venir,
+    .Events-Passe {
+        padding: 3rem 4rem;
+    }
+
+    .event-card img {
+        height: 250px;
+    }
+}
+
+/* Large Desktop - 1440px+ */
+@media (min-width: 1440px) {
+    .Filtrage,
+    .Events-Venir,
+    .Events-Passe {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
 }
 .maps-place {
   width: 30vw;
   border-left: red solid;
   height: 70vh;
+  padding: 2rem;
 }
 #afficher {
   font-family: "koulen";
@@ -247,6 +692,28 @@ header img {
   font-size: 24px;
   background: red;
 }
+#reculer {
+  display: none;
+  z-index: 10;
+  font-family: "koulen";
+  justify-self: center;
+  border: none;
+  margin: 1rem auto;
+  padding: 1em 3em;
+  padding-left: 3em;
+  padding-right: 3em;
+  color: white;
+  font-size: 24px;
+  background: red;
+}
+.aff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
 .blog-carte-grid {
   display: grid;
   grid-template-columns: repeat(3, 20%);
@@ -258,6 +725,18 @@ header img {
   height: 100vh;
   position: relative;
 }
+/* LOAD mOEre */
+
+.blog-carte-grid-load {
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  width: 100%;
+  gap: 160px;
+  row-gap: 24px;
+  justify-content: center;
+  height: auto;
+}
+/* LLLLLLLLLLLLLLLLL */
 .blog-carte-grid::after {
   content: "";
   position: absolute;
@@ -308,6 +787,7 @@ header img {
 }
 
 /* ==================== */
+
 /* footer*/
 footer {
   border-top: solid red;
@@ -364,13 +844,20 @@ footer button {
     height: auto;
   }
   #maincontent {
+    justify-content: center;
   }
+}
+
+.maps-place-mobile {
+  display: none;
 }
 
 /* MOBILE */
 @media (max-width: 1280px) {
+  .maps-place-mobile {
+    display: block;
+  }
   #bloghero {
-    margin-top: 8vh;
     height: 50vw;
     width: 100%;
   }
@@ -398,10 +885,29 @@ footer button {
     margin-left: 10rem;
     transition: all 0.2s ease-in-out;
   }
+}
 
+/* =========================================== */
+/* blog*/
+/* =========================================== */
+
+
+
+/* HERO SECTION PAGE EDetail */
+.hero-detail{
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.hero-detail img {
+  width: 100%;
+  height: 100%;
   .blog-carte-grid {
     grid-template-columns: repeat(2, 20%);
-    border: teal solid;
+    column-gap: 240px;
     justify-content: start;
   }
   .carte-blog p {
@@ -412,11 +918,18 @@ footer button {
   }
 }
 @media (max-width: 700px) {
-  .blog-carte-grid {
+  .blog-carte-grid-load {
     grid-template-columns: 90%;
     gap: 32px;
+    height: auto;
+    justify-content: center;
+  }
+  .blog-carte-grid {
+    grid-template-columns: 90%;
+    justify-content: center;
+    gap: 32px;
     height: 90%;
-    overflow: scroll;
+    overflow: hidden;
   }
   .carte-blog {
     height: 200px;

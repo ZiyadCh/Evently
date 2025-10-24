@@ -8,8 +8,6 @@
     <title>Evently | FAQ</title>
 </head>
 <body>
-
-
    <section class="hero">
         <header class="header">
             <div class="logo">
@@ -21,13 +19,13 @@
                 <span></span>
             </div>
             <nav class="nav" id="nav">
-                <a href="">Home</a>
-                <a href="">Event</a>
-                <a href="">Blog</a>
-                <a href="">FAQ</a>
+                <a href="/index.html">Home</a>
+                <a href="/html/Event.html">Event</a>
+                <a href="/html/Blog.html">Blog</a>
+                <a href="/html/FAQ.html">FAQ</a>
             </nav>
         </header>
-      <h2>FREQUENTLY ASKED<br>QUESTIONS</h2>
+      <h2>FREQUENTLY ASKED <br>QUESTIONS</h2>
     </section>
 
   
@@ -87,8 +85,11 @@
       <h2>SEND US MESSAGE</h2>
       <form id="contact-form">
         <input type="text" placeholder="YOUR NAME" id="name">
+        <p class="error"></p>
         <input type="text" placeholder="YOUR EMAIL" id="email">
+        <p class="error"></p>
         <input type="text" placeholder="YOUR SUBJECT">
+        <p class="error"></p>
         <textarea placeholder="YOUR MESSAGE ...." id="message"></textarea>
         <button type="submit">SEND</button>
       </form>
@@ -107,13 +108,71 @@
             <a href="twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="youtube.com"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        
-
     </div>
-  </section>  
+  </section>    
+    <footer>
+      <img src="/images/logo.svg" alt="" />
+      <!-- footer details -->
+      <!-- mobile -->
+      <div class="responsive-footer">
+        <details>
+          <summary>Contact</summary>
+          <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+          <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+          <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+        </details>
+        <details>
+          <summary>Liens</summary>
+          <p><a href="/index.html">Home</a></p>
+          <p><a href="/index.html">Events</a></p>
+          <p><a href="/index.html">blog</a></p>
+          <p><a href="/index.html">faq</a></p>
+        </details>
+        <details>
+          <summary>Email</summary>
+          <p>Pour plus d'information, contacter sur l'email</p>
+          <div class="btn-mail" style="display: flex">
+            <input type="email" />
+            <button>></button>
+        </details>
+      </div>
 
-  
+      <!-- desktop -->
+      <div class="footer-content">
+        <div class="f-detail">
+          <h2>Contact</h2>
+          <p><img src="/images/phone-call.png" alt="img" />06 000 000</p>
+          <p><img src="/images/mail.png" alt="img" />example@email.com</p>
+          <p><img src="/images/gps.png" alt="img" />rue,city,123</p>
+        </div>
+        <div class="f-detail">
+          <h2>liens</h2>
+          <p><a href="/index.html">Home</a></p>
+          <p><a href="/index.html">Events</a></p>
+          <p><a href="/index.html">blog</a></p>
+          <p><a href="/index.html">faq</a></p>
+        </div>
+        <div class="f-detail">
+          <h2>Email</h2>
+          <p>Pour plus d'information, contacter sur l'email</p>
+          <div class="btn-mail" style="display: flex">
+            <input type="email" />
+            <button>></button>
+          </div>
+        </div>
+      </div>
+      <h3
+        style="
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Copyright2025-Evently
+      </h3>
+    </footer>
 
-  <script src="/js/script.js"></script>
+  <script src="/js/faq.js"></script>
 </body>
 </html>

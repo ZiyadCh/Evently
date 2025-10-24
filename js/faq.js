@@ -13,3 +13,14 @@ document.querySelectorAll('.faq-item').forEach(item => {
     item.classList.toggle('active');
   });
 });
+
+document.querySelectorAll('.footer-title').forEach(title => {
+  title.addEventListener('click', () => {
+    const content = title.nextElementSibling;
+    content.classList.toggle('active');
+  })
+})
+
+
+
+
